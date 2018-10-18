@@ -1,0 +1,35 @@
+{
+    "code": "1",
+    "msg": "SUCCESS",
+    "data":
+      {
+        "map":{
+          "InstantAddF":32.7,
+          "lastMonthFee":0.33,
+          "InstantAddL":25.6,
+          "lastMonthEle":-0.33
+        },
+        "map1":{
+          "MoonBasicF":0,
+          "Md":{
+            "name":"需量",
+            "value":1200
+          },
+          "DayDemand":["123", "234", "345", "456", "125", "231", "245", "324"]
+        },
+        "map2":{
+          "fee":32.5,
+          "list":[
+            {"value":335, "name":"峰"},
+            {"value":310, "name":"谷"},
+            {"value":234, "name":"平"}
+          ]
+        },
+        "map3":{
+          "rate":0.9,
+          "fine":0
+        }
+      },
+    "timestamp": 0
+  }
+  

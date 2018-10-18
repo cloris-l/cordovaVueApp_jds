@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*
+@module 颜色
+*/
+
+  /*背景色*/
+
+  /*背景颜色名*/
+  $bg-blue:#3a8dda;//蓝色背景
+  /*边框颜色*/
+  $border-gray:#d9d9d9;//灰色边框
+  $border-blue:#3a8dda;//蓝色边框
+  /*字体颜色*/
+$font-baseColor:#fff;//基础字体颜色
+$font-greenColor:#138782;//菜单选中颜色
+$font-blackColor:#353535;
+$font-grayBlueColor:#546a79;//灰蓝色
+$font-grayColor:#a6afb6;//灰色
+$font-yellowColor:#faba32;//黄色
+$font-blueColor:#3a8dda;//蓝色
+$font-redColor:#e52815;//红色
+/*
+@module 字体大小
+*/
+$fontSizeBase:.24rem;
+$fontSize18:.18rem;
+$fontSize20:.2rem;
+$fontSize26:.26rem;
+$fontSize28:.28rem;
+$fontSize30:.30rem;
+$fontSize40:.40rem;

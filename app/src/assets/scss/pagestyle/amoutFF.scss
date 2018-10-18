@@ -1,0 +1,280 @@
+@import '../global.scss';
+.amoutFF-wrap {
+    .title {
+        @extend .com-padding;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        font-size: .24rem;
+        color: $font-blackColor;
+        @extend .com-content;
+        line-height: .45rem;
+    }
+    .amoutFF-content {
+        min-height: calc(100vh - 4.28rem);
+        min-height: -webkit-calc(100vh - 4.28rem)
+    }
+    .now-container,
+    .history-container {
+        height: 8.48rem;
+    }
+    /*-------本月信息---------*/
+    .total-wrap {
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        @extend .com-content;
+        &>div {
+            float: left;
+            width: 50%;
+            &:last-child {
+                padding-left: .2rem;
+                border-left: 1px solid $border-gray;
+            }
+            .icon {
+                margin-top: .1rem;
+                i {
+                    color: $font-greenColor;
+                    font-size: .40rem;
+                    &.icon-dian {
+                        margin-left: -.05rem;
+                    }
+                }
+            }
+            .detail {
+                // float: left;
+                // width: calc(100% - .7rem);
+                // width: -webkit-calc(100% - 0.7rem);
+                // padding-left: .2rem;
+                .info {
+                    i {
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                    .down {
+                        color: #3fc529;
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                    }
+                    .up {
+                        color: #ff7900;
+                        -webkit-transform: rotate(-145deg);
+                        transform: rotate(-145deg);
+                    }
+                }
+            }
+        }
+    }
+    .detail-wrap {
+        .mint-tab-container-item {
+            height: 6.5rem;
+            padding: .3rem 0;
+            /*----本月基本电费信息-----*/
+            .now-info {
+                .item {
+                    float: left;
+                    width: 33.3%;
+                    text-align: center;
+                    color: $font-greenColor;
+                    .sub-title em {
+                        display: inline-block;
+                        width: .3rem;
+                        height: .3rem;
+                        border-radius: 100%;
+                        background: #3a8dda;
+                        color: #fff;
+                        text-align: center;
+                        line-height: .3rem;
+                        font-size: .16rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .tip {
+                padding: .05rem 0;
+                border-radius: 1rem;
+                box-shadow: 0 0 5px #a6afb6;
+                width: calc(100% - .66rem);
+                margin: .2rem auto 0;
+                text-align: center;
+                i {
+                    font-size: .4rem;
+                    vertical-align: middle;
+                    margin-right: .1rem;
+                }
+                .icon-xiaolian {
+                    color: $font-yellowColor;
+                }
+                .icon-kulian {
+                    color: $font-greenColor;
+                }
+                span {
+                    color: red;
+                    font-size: $fontSize28;
+                    font-weight: bold;
+                }
+            }
+            /*---本月力调电费----*/
+            .force-wrap {
+                text-align: center;
+                color: $font-blackColor;
+                .statu-icon {
+                    color: $font-yellowColor;
+                    i {
+                        font-size: 2.6rem;
+                    }
+                }
+                .device-tlt {
+                    padding-left: .15rem;
+                    display: inline-block;
+                    width: calc(100% - 1rem);
+                    width: -webkit-calc(100% - 1rem);
+                    overflow: hidden;
+                    height: .4rem;
+                    line-height: .4rem;
+                    text-align: left;
+                }
+                .rate {
+                    color: $font-greenColor;
+                    font-weight: bold;
+                    font-size: .4rem;
+                    margin-bottom: .4rem;
+                }
+                .fee {
+                    color: #faba32;
+                    font-size: .36rem;
+                }
+                .icon-kulian,
+                .red {
+                    color: red;
+                }
+            }
+        }
+    }
+    /*----电度电费-------*/
+    .eleFee-wrap {
+        @extend .com-padding;
+        padding-top: .2rem;
+        .info {
+            float: left;
+            width: 33.3%;
+            margin-top: 1.5rem;
+            text-align: center;
+            p {
+                line-height: .45rem;
+            }
+            &.history {
+                margin-top: 1rem;
+            }
+            &.noTime {
+                width: 100%;
+            }
+        }
+        .eleFee-echarts {
+            float: left;
+            width: 66.6%;
+            height: 4.5rem;
+        }
+    }
+    .echarts {
+        width: 100%;
+        height: 4.5rem;
+    }
+    #hisEchart {
+        height: 5.5rem;
+    }
+    .base-value {
+        color: $font-greenColor;
+        font-size: $fontSize18;
+        .value {
+            font-size: .3rem;
+            font-weight: bold;
+            &.big {
+                font-size: .4rem;
+            }
+        }
+    }
+    .sub-title {
+        color: $font-grayBlueColor;
+    }
+    /*-------------历史信息-----------*/
+    .history-container {
+        padding: .4rem 0;
+        .button-tab {
+            width: 4.6rem;
+            margin: 0 auto .2rem;
+            .item {
+                width: 50%;
+            }
+            .arrow {
+                right: .05rem;
+            }
+        }
+        /*-------显示一个月信息-----*/
+        .single-month {
+            .fee-wrap {
+                border-top: 1px solid $border-gray;
+                border-bottom: 1px solid $border-gray;
+                overflow: hidden;
+                .fee-left {
+                    float: left;
+                    width: 2.3rem;
+                    padding: .5rem 0 .5rem .3rem;
+                    border-right: 1px solid $border-gray;
+                }
+                .fee-right {
+                    float: left;
+                    width: calc(100% - 2.3rem);
+                    width: -webkit-calc(100% - 2.3rem);
+                    p {
+                        padding-left: .3rem;
+                        border-bottom: 1px solid $border-gray;
+                        line-height: .55rem;
+                        &.noBase {
+                            line-height: .89rem;
+                        }
+                        &:last-child {
+                            border: 0;
+                        }
+                        .percentage {
+                            color: $font-greenColor;
+                            float: right;
+                        }
+                        padding-right: .4rem;
+                    }
+                }
+            }
+        }
+        /*-------显示六个月--------*/
+        .total-month {
+            @extend .com-padding;
+            .list-wrap {
+                .item {
+                    clear: both;
+                    overflow: hidden;
+                    span {
+                        float: left;
+                        width: 12.5%;
+                        text-align: center;
+                        &:first-child {
+                            width: 25%;
+                            color: $font-blackColor
+                        }
+                    }
+                    &.name {
+                        background: #87a2b5;
+                        color: #fff;
+                        line-height: .6rem;
+                    }
+                    &.value {
+                        background: #e3edf4;
+                        color: $font-greenColor;
+                        line-height: .8rem;
+                        span:first-child {
+                            line-height: .3rem;
+                            padding-top: .1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

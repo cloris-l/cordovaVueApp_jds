@@ -1,0 +1,4 @@
+#Mon Sep 17 15:14:14 CST 2018
+base.0=/Users/enesource/work/App/platforms/android/app/build/intermediates/transforms/dexMerger/debug/10
+renamed.0=classes.dex
+file.0=/Users/enesource/work/App/platforms/android/app/build/intermediates/transforms/dexMerger/debug/10/classes.dex

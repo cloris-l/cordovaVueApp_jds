@@ -1,0 +1,39 @@
+{
+  "code":"1",
+  "data":{
+    "dataList":[
+      {
+        "name": "变压器1",
+        "sign": 10,
+        "signName": 10,
+        "value": 30,
+        "status": "10,20,20,30,10,10",
+        "detail":""
+      },
+      {
+        "name": "变压器2",
+        "sign": 10,
+        "signName": 10,
+        "value": 30,
+        "status": "10,40,20,30,10,10",
+        "detail":""
+      },
+      {
+        "name": "变压器3",
+        "sign": 10,
+        "signName": 10,
+        "value": 30,
+        "status": "10,20,20,30,10,10",
+        "detail":""
+      },{
+        "name": "变压器4",
+        "sign": 10,
+        "signName": 10,
+        "value": 30,
+        "status": "10,70,20,30,10,10",
+        "detail":""
+      }
+    ]
+  },
+  "msg":"success"
+}

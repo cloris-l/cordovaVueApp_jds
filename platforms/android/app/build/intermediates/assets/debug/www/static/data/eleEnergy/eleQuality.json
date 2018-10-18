@@ -1,0 +1,37 @@
+{
+  "code":"1",
+  "data":{
+    "voltDiff":10,
+    "voltDiffSum":100,
+    "factorDiff":9,
+    "factorDiffSum":80,
+    "waveDiff":10,
+    "waveDiffSum":50,
+    "dataList":[
+      {
+        "dateTime": "2018-04",
+        "voltNum": 10,
+        "factorNum": 10,
+        "waveNum": 100
+      },
+      {
+        "dateTime": "2018-03",
+        "voltNum": 12,
+        "factorNum": 12,
+        "waveNum": 12
+      },
+      {
+        "dateTime": "2018-02",
+        "voltNum": 13,
+        "factorNum": 15,
+        "waveNum": 16
+      },{
+        "dateTime": "2018-01",
+        "voltNum": 13,
+        "factorNum": 15,
+        "waveNum": 16
+      }
+    ]
+  },
+  "msg":"success"
+}

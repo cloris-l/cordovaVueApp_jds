@@ -1,0 +1,681 @@
+@import 'variate.scss';
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+}
+
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+/* HTML5 媒体文件跟 img 保持一致 */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+body,
+button,
+input,
+select,
+textarea {
+    font-style: normal;
+    font-size: $fontSizeBase;
+    font-family: \5FAE\8F6F\96C5\9ED1, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $font-baseColor;
+}
+
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* IE bug fixed: th 不继承 text-align*/
+
+th {
+    text-align: inherit;
+}
+
+
+/* 去除默认边框 */
+
+fieldset,
+img {
+    border: 0;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+    display: block;
+}
+
+
+/* 去掉 firefox 下此元素的边框 */
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+
+/* 一致的 del 样式 */
+
+del {
+    text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+/* 去掉列表前的标识, li 会继承 */
+
+ol,
+ul {
+    list-style: none;
+}
+
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+
+caption,
+th {
+    text-align: left;
+}
+
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+
+/* 统一上标和下标 */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* 正常链接 未访问 */
+
+a:link {
+    text-decoration: none;
+}
+
+
+/* 鼠标悬停 */
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* 默认不显示下划线，保持页面简洁 */
+
+ins,
+a {
+    text-decoration: none;
+}
+
+
+/* 代码字体 */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+
+/* 隐藏, 通常用来与 JS 配合 */
+
+body .fn-hide {
+    display: none;
+}
+
+
+/* a链接去掉点击时候的虚线*/
+
+a,
+button,
+input {
+    text-decoration: none;
+    outline: none;
+    /*ff*/
+    // hide-focus: expression(this.hideFocus=true);
+    /*ie*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*初始化系统默认样式*/
+
+i,
+em {
+    font-style: normal;
+}
+
+input,
+select,
+textarea {
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
+    font-family: \5FAE\8F6F\96C5\9ED1, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+    color: #333;
+}
+
+*,
+*:after,
+*::before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* 清除浏览器默认行为 */
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+a,
+button {
+    -webkit-user-select: none;
+}
+
+input[type=tel],
+input[type=number],
+input[type=password],
+input[type=date] {
+    font-family: tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+:-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    color: #c7c7c7;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #c7c7c7;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #c7c7c7;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #c7c7c7;
+}
+
+
+/*input[type="date"]:before {
+    content: attr(placeholder);
+    color:#c7c7c7;width: 100%;
+    text-align: center;
+}*/
+
+body {
+    color: #000;
+    margin: 0 auto;
+    overflow-x: hidden;
+    // width: 7.5rem;
+    min-height: 100%;
+    background: #ebebeb;
+    font-family: 'Avenir', '微软雅黑', '黑体', Helvetica, sans-serif;
+    font-size: $fontSizeBase;
+}
+
+a {
+    color: #666;
+}
+
+
+/*------------global-css-------------*/
+
+
+/* 清理浮动 */
+
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+.fn-clear {
+    zoom: 1;
+    /* for IE6 IE7 */
+}
+
+
+/*公共间距*/
+
+.mt10 {
+    margin-top: .1rem;
+}
+
+.mt20 {
+    margin-top: .2rem;
+}
+
+.mb10 {
+    margin-bottom: .1rem;
+}
+
+.mb20 {
+    margin-bottom: .2rem;
+}
+
+.ml10 {
+    margin-left: .1rem;
+}
+
+.ml20 {
+    margin-left: .2rem;
+}
+
+
+/*浮动*/
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.heightFull {
+    min-height: 100%;
+    background: #ebebeb
+}
+
+.contaniner {
+    position: relative;
+    min-height: 100%;
+    &>.main {
+        min-height: 100%;
+        padding-top: .88rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.com-padding {
+    padding: 0 .33rem;
+}
+
+.com-content {
+    background: #fff;
+}
+
+.arrow {
+    position: absolute;
+    right: .25rem;
+    top: 0;
+    i {
+        display: block;
+        color: #bbb;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
+.base-select {
+    // width: 2.2rem;
+    line-height: .45rem;
+    position: relative;
+    border: 1px solid #cad3df;
+    border-radius: 3px;
+    padding-right: 20px;
+    span {
+        padding: .25rem 0;
+        width: 100%;
+        height: .5rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-left: .15rem;
+    }
+    .arrow {
+        right: .1rem;
+    }
+}
+
+.base-bd {
+    border: 1px solid $border-gray;
+}
+
+
+/*------没有边框的选择框-----*/
+
+.no-bd-select {
+    width: 100%;
+    text-align: center;
+    span {
+        display: inline-block;
+        color: $font-blackColor;
+    }
+    i {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-left: .1rem;
+        color: #bbb;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
+
+/*---------按钮式的内容切换-----------*/
+
+.button-tab {
+    border: 1px solid $border-blue;
+    border-radius: 3px;
+    display: flex;
+    .item {
+        flex-grow: 1;
+        line-height: .6rem;
+        text-align: center;
+        border-right: 1px solid $border-blue;
+        position: relative;
+        &:last-child {
+            border: 0;
+        }
+        &.on {
+            color: #fff;
+            background: $bg-blue
+        }
+    }
+}
+
+.submit {
+    height: .6rem;
+    background: $bg-blue!important;
+    color: #fff!important;
+    font-size: .24rem;
+}
+
+
+/*----------自定义-具有遮罩的弹出框----------*/
+
+.gray-pop {
+    width: 100%;
+    background: rgba(53, 53, 53, 0.65);
+    position: fixed;
+    height: 100%;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    .pop-content {
+        position: absolute;
+        @extend .com-padding;
+        padding-top: .33rem;
+        padding-bottom: .33rem;
+        background: #fff;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        animation: animate .1s linear;
+        &.pop-middle {
+            bottom: 2.5rem;
+        }
+    }
+    @keyframes animate {
+        0% {
+            bottom: -2.6rem
+        }
+        100% {
+            bottom: 0
+        }
+    }
+}
+
+
+/*--------底部有边框的tab切换----------*/
+
+.tab-wrap {
+    line-height: .9rem;
+    position: relative;
+    span {
+        float: left;
+        text-align: center;
+        color: $font-grayColor;
+        &.on {
+            color: $font-blackColor;
+        }
+    }
+    .line {
+        position: absolute;
+        height: 3px;
+        background: $bg-blue;
+        left: 0;
+        bottom: 0;
+        transition: all ease-in .1s;
+        &.left50 {
+            left: 50%;
+        }
+        &.left33 {
+            left: 33.3%;
+        }
+        &.left66 {
+            left: 66.6%;
+        }
+    }
+}
+
+
+/*------常用百分比宽度-------*/
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.3%;
+}
+
+.col-4 {
+    width: 25%;
+}
+
+
+/*-------热更新进度条-------*/
+
+#mask-wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    // display: -webkit-flex;
+    /* Safari */
+    // display: flex;
+    display: none;
+    text-align: center;
+    color: #fff;
+    font-size: .6rem;
+    align-items: center;
+    .process-con {
+        width: 80%;
+        margin: 0 auto;
+        background: #ebebeb;
+        border-radius: 15px;
+        height: .3rem;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        #current {
+            position: absolute;
+            width: 0;
+            background: #3a8dda;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 15px;
+        }
+        #process-value {
+            position: absolute;
+            top: -.5rem;
+            width: 100%;
+            text-align: center;
+            font-size: .3rem;
+        }
+    }
+}

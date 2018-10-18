@@ -1,0 +1,59 @@
+@import '../global.scss';
+.dynamic-wrap {
+    @extend .com-padding;
+    @extend .com-content;
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+    .no-bd-select {
+        font-size: $fontSize28;
+    }
+    .item-list {
+        overflow: hidden;
+        margin-top: .4rem;
+        &.current {
+            height: 1.12rem;
+        }
+        .item {
+            float: left;
+            width: 33.3%;
+            padding-right: .1rem;
+            &:nth-child(3n) {
+                padding-right: 0;
+            }
+            margin-bottom: .1rem;
+            .con {
+                padding: .2rem 0;
+                text-align: center;
+                display: block;
+                width: 100%;
+                border-radius: 3px;
+                color: #fff;
+                .value {
+                    font-size: $fontSize30;
+                    margin-right: .1rem;
+                }
+            }
+        }
+    }
+    .device {
+        background: #d8e8f8;
+        color: #5d8ab2 !important;
+        &.on {
+            background: #83aed5;
+            color: #fff!important;
+        }
+    }
+    .bg1 {
+        background: #ea996d
+    }
+    .bg2 {
+        background: #71b89e
+    }
+    .bg3 {
+        background: #edcf92
+    }
+    #echart {
+        width: 100%;
+        height: 6rem;
+    }
+}
